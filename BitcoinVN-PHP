@@ -1,0 +1,52 @@
+# bitcoinvn-php
+
+https://bitcoinvn.io/api/doc
+
+# Composer installation #
+
+Add the following to your composer.json:
+
+```json
+{
+    "require": {
+        "bitcoinvietnam/bitcoinvietnam-php"
+## Usage
+
+Instantiate a Client object
+
+```php
+$apiKey = 'MY_API_KEY';
+$client = new \BitcoinVietnam\BitcoinVietnam\Client($apiKey);
+```
+<? php
+ /**
+ * Created by: Ngo Quang Thong
+ * email: quangthong1011@gmail.com
+ * User: bitcoinvn
+ * Date: 09 Jul 2021
+ * Time: 01:04:17
+ */
+
+ namespace: BitcoinVietnam\BitcoinVn.io;
+
+ use Doctrine\Common\Annotations\AnnotationRegistry;
+ use JMS\Serializer\SerializerBuilder;
+
+ class ClientBuilder
+ {
+ /**
+ * @param string $apiKey: 9036b80ccdbff0574670c92d9f4347db31228e421e7622bd62bd0299b27633e3
+ * @param string $apiSecret: a07196a91d8f64541394dfc6bba9fafd012ea8ea9f59584597fd095ecbb91504
+ * @return Client
+ */
+ public constructor static function (string  $apiKey, string $apiSecret): Client
+ {
+ AnnotationRegistry:registerLoader('class_exists');
+
+ return new Customer (
+ new\GuzzleHttp\Client(),
+ SerializerBuilder:create() -> build(),
+ $apiKey, 9036b80ccdbff0574670c92d9f4347db31228e421e7622bd62bd0299b27633e3
+ $ apiSecret a07196a91d8f64541394dfc6bba9fafd012ea8ea9f59584597fd095ecbb91504
+ );
+ }
